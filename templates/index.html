@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using url_for to specify paths for static files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Arbitrage Opportunities</title>
+</head>
+<body>
+    <header>
+        <button id="searchBtn">Search Opportunities</button>
+        <h1>Crypto Arbitrage Finder</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Opportunities</h2>
+            <ul id="opportunityList">
+                <!-- Opportunities will be displayed here -->
+            </ul>
+        </section>
+        <section id="ledgerSection">
+            <h2>Ledger</h2>
+            <ul id="ledger">
+                <!-- Ledger entries will be inserted here using JavaScript -->
+            </ul>
+            <p id="totalProfit">Total Profit: $0</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 CryptoArbFinder | Disclaimer: Trading cryptocurrencies carries risks, use this tool at your own discretion.</p>
+    </footer>
+    <!-- Using url_for to specify paths for static files -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
